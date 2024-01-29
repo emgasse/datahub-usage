@@ -1,0 +1,27 @@
+{
+	"$schema":	"http://json-schema.org/draft-07/schema#",
+	"description":	"DataSpecificationJSONSchema",
+	"type":	"object",
+	"properties":	{
+		"DossierId":	{
+			"$ref":	"#/definitions/DossierIddef"
+		},
+		"IBAN_Id":	{
+			"$ref":	"#/definitions/IBANdef"
+		}
+	},
+	"required":	[
+		"DossierId",
+		"IBAN_Id"
+	],
+	"definitions":	{
+		"DossierIddef":	{
+			"type":	"string",
+			"minLength": 1
+		},
+		"IBANdef":	{
+			"type":	"string",
+			"minLength": 1
+		}
+	}
+}

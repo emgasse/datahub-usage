@@ -1,0 +1,26 @@
+{
+	"$schema":	"http://json-schema.org/draft-07/schema#",
+	"description":	"DataSpecificationJSONSchema",
+	"type":	"object",
+	"properties":	{
+		"DossierId":	{
+			"$ref":	"#/definitions/DossierIddef"
+		},
+		"Documents":	{
+			"$ref":	"#/definitions/Documentsdef"
+		}
+	},
+	"required":	[
+		"DossierId",
+		"Documents"
+	],
+	"definitions":	{
+		"DossierIddef":	{
+			"type":	"string",
+			"minLength": 1
+		},
+		"Documentsdef":	{
+			"type":	"number"
+		}
+	}
+}
