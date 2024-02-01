@@ -1,0 +1,42 @@
+{
+	"$schema":	"http://json-schema.org/draft-07/schema#",
+	"description":	"DataSpecificationJSONSchema",
+	"type":	"object",
+	"properties":	{
+		"DossierId":	{
+			"$ref":	"#/definitions/DossierIddef"
+		},
+		"NAF":	{
+			"$ref":	"#/definitions/NAFdef"
+		},
+		"NbrRegimesFiscaux":	{
+			"$ref":	"#/definitions/NbrRegimesFiscauxdef"
+		},
+		"RegimeFiscalEtablPrincipal":	{
+			"$ref":	"#/definitions/RegimeFiscalEtablPrincipaldef"
+		}
+	},
+	"required":	[
+		"DossierId",
+		"NAF",
+		"NbrRegimesFiscaux",
+		"RegimeFiscalEtablPrincipal"
+	],
+	"definitions":	{
+		"DossierIddef":	{
+			"type":	"string",
+			"minLength": 1
+		},
+		"NAFdef":	{
+			"type":"string",
+			"minLength": 1
+		},
+		"NbrRegimesFiscauxdef":	{
+			"type":	"number"
+		},
+		"RegimeFiscalEtablPrincipaldef":	{
+			"type":	"string",
+			"minLength": 1
+		}
+	}
+}

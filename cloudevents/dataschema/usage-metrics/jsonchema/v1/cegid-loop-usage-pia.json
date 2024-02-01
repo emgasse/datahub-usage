@@ -1,0 +1,33 @@
+{
+	"$schema":	"http://json-schema.org/draft-07/schema#",
+	"description":	"DataSpecificationJSONSchema",
+	"type":	"object",
+	"properties":	{
+		"Documents_12m":	{
+			"$ref":	"#/definitions/Documents_12mdef"
+		},
+		"DossierId":	{
+			"$ref":	"#/definitions/DossierIddef"
+		},
+		"Pages":	{
+			"$ref":	"#/definitions/Pagesdef"
+		}
+	},
+	"required":	[
+		"Documents_12m",
+		"DossierId",
+		"Pages"
+	],
+	"definitions":	{
+		"Documents_12mdef":	{
+			"type":	"number"
+		},
+		"DossierIddef":	{
+			"type":	"string",
+			"minLength": 1
+		},
+		"Pagesdef":	{
+			"type":	"number"
+		}
+	}
+}

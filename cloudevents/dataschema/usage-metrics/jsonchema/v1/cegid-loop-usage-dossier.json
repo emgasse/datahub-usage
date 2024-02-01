@@ -1,0 +1,47 @@
+{
+	"$schema":	"http://json-schema.org/draft-07/schema#",
+	"description":	"DataSpecificationJSONSchema",
+	"type":	"object",
+	"properties":	{
+		"DossierId":	{
+			"$ref":	"#/definitions/DossierIddef"
+		},
+		"Ecritures_12m":	{
+			"$ref":	"#/definitions/Ecritures_12mdef"
+		},
+		"RoleCoProd":	{
+			"$ref":	"#/definitions/RoleCoProddef"
+		},
+		"RoleConsult":	{
+			"$ref":	"#/definitions/RoleConsultdef"
+		},
+		"RoleStart":	{
+			"$ref":	"#/definitions/RoleStartdef"
+		}
+	},
+	"required":	[
+		"DossierId",
+		"Ecritures_12m",
+		"RoleCoProd",
+		"RoleConsult",
+		"RoleStart"
+	],
+	"definitions":	{
+		"DossierIddef":	{
+			"type":	"string",
+			"minLength": 1
+		},
+		"Ecritures_12mdef":	{
+			"type":	"number"
+		},
+		"RoleCoProddef":	{
+			"type":	"number"
+		},
+		"RoleConsultdef":	{
+			"type":	"number"
+		},
+		"RoleStartdef":	{
+			"type":	"number"
+		}
+	}
+}
