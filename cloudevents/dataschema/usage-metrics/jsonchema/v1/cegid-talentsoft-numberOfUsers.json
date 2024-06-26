@@ -1,0 +1,32 @@
+{
+	"$schema":	"http://json-schema.org/draft-07/schema#",
+	"description":	"DataSpecificationJSONSchema",
+	"type":	"object",
+	"properties":	{
+		"Value":	{
+			"$ref":	"#/definitions/Valuedef"
+		},
+		"OrganisationName":	{
+			"$ref":	"#/definitions/OrganisationNamedef"
+		},
+		"SalesForceId":	{
+			"$ref":	"#/definitions/SalesForceIddef"
+		}
+	},
+	"required":	[
+		"Value"
+	],
+	"definitions":	{
+		"Valuedef":	{
+			"type":	"number"
+		},
+		"OrganisationNamedef":	{
+			"type":	"string",
+			"minLength": 1
+		},
+		"SalesForceIddef":	{
+			"type":	"string",
+			"minLength": 1
+		}
+	}
+}
