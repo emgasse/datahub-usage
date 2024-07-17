@@ -2,24 +2,26 @@
 	"$schema":	"http://json-schema.org/draft-07/schema#",
 	"description":	"DataSpecificationJSONSchema",
 	"type":	"object",
-	"properties":	{
-		"NbBulletins":	{
-			"$ref":	"#/definitions/NbBulletinsdef"
+	"properties": {
+		"NumberOfPayslips": {
+			"$ref": "#/definitions/NumberOfPayslipsdef"
 		},
-		"PeriodId":	{
-			"$ref":	"#/definitions/PeriodIddef"
+		"PeriodId": {
+			"$ref": "#/definitions/PeriodIddef"
 		}
 	},
-	"required":	[
-		"NbBulletins"
+	"required": [
+		"NumberOfPayslips"
 	],
-	"definitions":	{
-		"NbBulletinsdef":	{
-			"type":	"number"
+	"definitions": {
+		"NumberOfPayslipsdef": {
+			"type": "number",
+			"description": "Number of payslip consumed during the period."
 		},
-		"PeriodIddef":	{
-			"type":	"string",
-			"pattern": "^[1-9][0-9]{5}$"
+		"PeriodIddef": {
+			"type": "string",
+			"pattern": "^[1-9][0-9]{5}$",
+			"description": "Identifier of the billing period for consumption."
 		}
 	}
 }
